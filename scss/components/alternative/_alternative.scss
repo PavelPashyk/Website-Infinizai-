@@ -1,0 +1,59 @@
+.wrapper-alternative {
+  @extend %wrapper;
+}
+
+.wrapper-alternative.container {
+  @include padding(0rem !important);
+}
+
+.alternative {
+  &__container {
+    margin: 0 auto;
+  }
+
+  &__item {
+    position: relative;
+
+    &:hover {
+      .alternative__inner-block img {
+        animation: turnover 1s linear infinite alternate;
+      }
+    }
+
+    @keyframes turnover {
+      0% {
+        transform: rotateY(90deg);
+      }
+      50% {
+        transform: rotateY(180deg);
+      }
+      100% {
+        transform: rotateY(270deg);
+      }
+    }
+  }
+
+  &__inner-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @extend %text-center;
+
+    img {
+      max-width: 7.8125rem;
+      width: 100%;
+      max-height: 7.8125rem;
+      height: 100%;
+      @include margin-bottom(0.625rem !important);
+    }
+
+    h3 {
+      @include font-size(2rem !important);
+      line-height: 121%;
+      @extend %text-center;
+      text-transform: capitalize;
+      color: $white;
+    }
+  }
+}

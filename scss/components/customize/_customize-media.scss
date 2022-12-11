@@ -1,0 +1,31 @@
+@include desktop-break {
+  .customize {
+    &__container {
+      @include padding(0.5rem 0rem !important);
+    }
+  }
+}
+
+@include laptop {
+  .customize {
+    &__container {
+      @include padding(1rem 0rem !important);
+    }
+
+    .carousel {
+      width: 90%;
+    }
+  }
+}
+
+@include table_small {
+  .customize {
+    &__block-img {
+      display: none;
+    }
+
+    .carousel {
+      width: 100%;
+    }
+  }
+}

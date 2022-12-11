@@ -1,0 +1,16 @@
+@mixin content(
+  $left: none,
+  $right: none,
+  $bottom: none,
+  $top: none,
+  $width,
+  $height
+) {
+  @extend %content;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+  top: $top;
+  width: $width;
+  height: $height;
+}

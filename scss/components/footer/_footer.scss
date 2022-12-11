@@ -1,0 +1,52 @@
+.wrapper-bottom {
+  @extend %wrapper;
+  background: $black;
+}
+
+.footer {
+  @extend %padding-Y;
+  color: $grey;
+  line-height: 250%;
+
+  a {
+    display: block;
+  }
+
+  h4 {
+    color: $white;
+    @include margin-bottom(1.25rem !important);
+  }
+
+  &__container {
+    div:not(:last-child) {
+      @include padding-right(6.25rem !important);
+    }
+  }
+
+  &__logo-block {
+    img {
+      @include margin-bottom(1.875rem !important);
+    }
+
+    p {
+      @include font-size(0.875rem !important);
+      line-height: 167%;
+    }
+  }
+
+  &__icons {
+    .bi {
+      cursor: pointer;
+      @include font-size(1.5rem !important);
+
+      &:hover {
+        @extend %transition_slow;
+        color: $blue;
+      }
+
+      &:active {
+        color: $red;
+      }
+    }
+  }
+}

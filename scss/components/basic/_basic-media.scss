@@ -1,0 +1,17 @@
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+
+@include laptop {
+  %padding-Y {
+    @include padding(3rem 0rem !important);
+  }
+}
+
+@include table {
+  %wrapper {
+    min-height: 10rem;
+  }
+}

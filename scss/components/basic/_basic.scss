@@ -1,0 +1,70 @@
+.container {
+  @include padding(0rem 3.75rem !important);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    @extend %transition_slow;
+    color: $blue;
+  }
+
+  &:active {
+    @extend %transition_quick;
+    color: $red;
+  }
+}
+
+.btn-blue {
+  width: 12.6875rem;
+  height: 4.375rem;
+  background: $blue;
+  text-transform: capitalize;
+}
+
+.btn:active {
+  box-shadow: 0px 0px 2rem 0.25rem $blue-light;
+}
+
+.block-text {
+  max-width: 55rem;
+  width: 100%;
+
+  &__top {
+    display: inline-block;
+    @include font-size(1rem !important);
+    @include margin-bottom(1rem !important);
+    @include padding-left(2.5rem !important);
+    line-height: 100%;
+    text-transform: uppercase;
+    color: $blue;
+    position: relative;
+
+    &::before {
+      @include content($left: 0rem, $top: 50%, $width: 2rem, $height: 2rem);
+      background-image: url("../img/basic/icon_fire.png");
+      transform: translateY(-50%);
+    }
+  }
+
+  &__title {
+    @include margin-bottom(2.6875rem !important);
+    text-transform: capitalize;
+  }
+
+  &__line {
+    position: relative;
+
+    &::after {
+      @include content($left: 0rem, $bottom: 0rem, $width: 100%, $height: 1rem);
+      @extend %back-pos_cover;
+    }
+  }
+
+  &__text {
+    @include font-size(1.125rem !important);
+    @include margin-bottom(3.3125rem !important);
+  }
+}

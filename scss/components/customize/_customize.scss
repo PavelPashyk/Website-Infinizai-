@@ -1,0 +1,38 @@
+.wrapper-customize {
+  @extend %wrapper;
+  background: $grey-dark;
+}
+
+.customize {
+  &__container {
+    align-items: center;
+  }
+
+  .block-text {
+    @extend %text-start;
+
+    &__title {
+      @include font-size(4rem !important);
+      color: $white;
+      line-height: 116%;
+    }
+
+    &__text {
+      @include font-size(1.25rem !important);
+      color: $grey-light;
+    }
+  }
+
+  .carousel {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .carousel-inner {
+    border-radius: 1.25rem;
+    overflow: hidden;
+  }
+  .carousel-item {
+    max-height: 14.375rem;
+  }
+}

@@ -1,0 +1,11 @@
+@include laptop {
+  .presentation {
+    &__container {
+      flex-direction: column-reverse;
+    }
+
+    &__block-img {
+      text-align: center;
+    }
+  }
+}

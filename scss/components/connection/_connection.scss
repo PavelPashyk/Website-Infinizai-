@@ -1,0 +1,37 @@
+.wrapper-connection {
+  @extend %wrapper;
+  background-image: url("../img/connection/connection-img.jpg");
+  @extend %back-pos_cover;
+}
+
+.connection {
+  @extend %padding-Y;
+
+  .block-text {
+    max-width: 52rem;
+    width: 100%;
+    @extend %text-center;
+    margin: 0 auto;
+
+    &__title {
+      @include font-size(4.5rem !important);
+      color: $black-dark;
+      line-height: 114%;
+    }
+
+    &__line::after {
+      bottom: -1rem;
+      background-image: url("../img/basic/line_blue.png");
+    }
+
+    &__text {
+      color: $black-light;
+    }
+  }
+
+  &__form {
+    max-width: 37rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

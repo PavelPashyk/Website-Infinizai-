@@ -1,0 +1,11 @@
+@include table_small {
+  .watching {
+    .block-text {
+      @include margin-bottom(1.25rem !important);
+    }
+
+    &__container {
+      flex-direction: column;
+    }
+  }
+}

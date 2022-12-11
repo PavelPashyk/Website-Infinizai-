@@ -1,0 +1,72 @@
+.wrapper-review {
+  @extend %wrapper;
+  background-image: url("../img/review/review_back.jpg");
+  @extend %back-pos_cover;
+}
+
+.review {
+  @extend %padding-Y;
+
+  .block-text {
+    margin: 0 auto;
+    @extend %text-center;
+
+    &__title {
+      @include font-size(4rem !important);
+      color: $white;
+      line-height: 116%;
+    }
+
+    &__text {
+      line-height: 162%;
+      color: $grey-light;
+    }
+  }
+
+  &__points {
+    justify-content: space-between;
+    margin-top: -3rem;
+  }
+
+  &__item {
+    @include margin(3rem 0.3125rem 0rem !important);
+    max-width: 38.75rem;
+    width: 100%;
+    min-height: 13.25rem;
+    background: $transparent;
+    border-radius: 1.25rem;
+    @include padding(2.1875rem 2.1875rem 2.1875rem 5rem !important);
+    @extend %transition_slow;
+
+    h3 {
+      @include font-size(2rem !important);
+      line-height: 131%;
+      text-transform: capitalize;
+      color: $white;
+      position: relative;
+
+      &::before {
+        @include content(
+          $left: -2.1rem,
+          $top: 50%,
+          $width: 1.8125rem,
+          $height: 1.8125rem
+        );
+        background-image: url("../img/review/review_icon.png");
+        transform: translateY(-50%);
+      }
+    }
+
+    &:hover {
+      background: $transparent-dark;
+
+      h3 {
+        color: $black-dark;
+      }
+
+      p {
+        color: $grey-dark;
+      }
+    }
+  }
+}

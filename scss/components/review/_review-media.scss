@@ -1,0 +1,27 @@
+@include desktop {
+  .review {
+    &__points {
+      justify-content: space-around;
+    }
+
+    &__item {
+      max-width: 36rem;
+    }
+  }
+}
+
+@include desktop-break {
+  .review {
+    &__item {
+      max-width: 30rem;
+    }
+  }
+}
+
+@include laptop {
+  .review {
+    &__item {
+      max-width: 38.75rem;
+    }
+  }
+}

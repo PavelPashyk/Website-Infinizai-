@@ -1,0 +1,117 @@
+.wrapper-top {
+  @extend %wrapper;
+  background: $bg;
+}
+
+.header {
+  .navbar {
+    @include padding(1.25rem 0rem !important);
+  }
+
+  .navbar-nav {
+    max-width: 37.5rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .navbar-collapse a {
+    @include font-size(1rem !important);
+    line-height: 162%;
+    color: $white;
+    position: relative;
+
+    &::after {
+      @include content(
+        $left: 0rem,
+        $bottom: 0.3125rem,
+        $width: 0%,
+        $height: 0.125rem
+      );
+      background: $yellow;
+      @extend %transition_slow;
+    }
+
+    &:hover {
+      color: $yellow;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &:active {
+      color: $red;
+    }
+
+    &:active::after {
+      background: $red;
+      @extend %transition_quick;
+    }
+  }
+
+  .nav-link {
+    @include margin(0.3125rem !important);
+  }
+  .nav-link.active {
+    color: $yellow;
+  }
+
+  &__btn {
+    width: 11.25rem;
+    min-height: 3.875rem;
+    line-height: 167%;
+    @include font-size(1.125rem !important);
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  .bi {
+    cursor: pointer;
+    @include margin(0rem 2.5rem 0rem 0.5rem !important);
+    @include font-size(2rem !important);
+    color: $white;
+
+    &:hover {
+      @extend %transition_slow;
+      color: $yellow;
+    }
+
+    &:active {
+      color: $red;
+    }
+
+    & > span {
+      @include font-size(0.6875rem !important);
+      line-height: 164%;
+    }
+  }
+}
+
+.presentation {
+  @extend %padding-Y;
+
+  &__container {
+    align-items: center;
+  }
+
+  .block-text {
+    @extend %text-start;
+
+    &__title {
+      @include font-size(4.5rem !important);
+      color: $white;
+      line-height: 119%;
+    }
+
+    &__line::after {
+      bottom: -0.625rem;
+      background-image: url("../img/basic/line_yellow.png");
+    }
+
+    &__text {
+      color: $grey;
+    }
+  }
+}

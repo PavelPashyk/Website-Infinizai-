@@ -1,0 +1,15 @@
+@include desktop-break {
+  .sponsors {
+    &__logo-item {
+      @include margin(0.625rem 2rem !important);
+    }
+  }
+}
+
+@include table_small {
+  .sponsors {
+    &__logo-block {
+      justify-content: center;
+    }
+  }
+}

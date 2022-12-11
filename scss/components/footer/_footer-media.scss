@@ -1,0 +1,23 @@
+@include laptop {
+  .footer {
+    &__icons {
+      .bi {
+        @include margin-right(2rem !important);
+      }
+    }
+  }
+}
+
+@include table {
+  .footer {
+    &__container {
+      div:not(:last-child) {
+        @include padding-right(1rem !important);
+      }
+    }
+
+    .col {
+      @include margin-bottom(1.25rem !important);
+    }
+  }
+}
