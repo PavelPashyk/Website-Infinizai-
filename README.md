@@ -11,3 +11,8 @@ ___
 
 
 The project website is located at https://pavelpashyk.github.io/Website-Infinizai-/
+
+
+#### Project preview:
+
+![Project preview](./img/basic/preview.jpg)
